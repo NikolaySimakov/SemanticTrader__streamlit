@@ -2,7 +2,7 @@ import pandas as pd
 from fuzzywuzzy import process  # Assuming fuzzywuzzy is used for string matching
 
 # Load the CSV file into a DataFrame
-tickers_and_names = pd.read_csv('./tickers_and_names.csv')
+tickers_and_names = pd.read_csv('./streamlit/tickers_and_names.csv')
 
 def find_similar_names_and_tickers(query, threshold=80):
     # Find matches above a certain score threshold
