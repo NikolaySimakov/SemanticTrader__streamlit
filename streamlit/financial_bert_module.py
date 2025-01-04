@@ -28,10 +28,7 @@ class FinBERTRegressor(nn.Module):
 if not ('model' in globals()):
 		model = FinBERTRegressor()
 		model.to(device)
-		import os
-		app_dir = os.path.dirname(os.path.abspath(__file__))
-		model_path = os.path.join(app_dir, 'model_regressor_weight_v2.pth')
-		model.regressor.load_state_dict(torch.load(model_path))
+		model.regressor.load_state_dict(torch.load('model_regressor_weight_v2.pth'))
 
 if not ('tokenizer' in globals()):
     tokenizer = BertTokenizer.from_pretrained("ProsusAI/finbert")
